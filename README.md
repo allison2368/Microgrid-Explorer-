@@ -1,4 +1,4 @@
-# Microgrid-Explorer-
+# Microgrid-Explorer
 
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/b2a05a70-1726-41f4-b43e-44feeecbdbeb">
 
