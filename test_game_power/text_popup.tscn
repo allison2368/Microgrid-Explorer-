@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlf5mxegsic5r"]
+
+[ext_resource type="Script" path="res://failed_popup.gd" id="1_kpwpv"]
+
+[node name="Control" type="PopupPanel"]
+title = "sdf\\"
+position = Vector2i(709, 416)
+size = Vector2i(428, 200)
+visible = true
+script = ExtResource("1_kpwpv")
+
+[node name="vbox" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 424.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="vbox"]
+layout_mode = 2
+text = "info box
+"
+
+[node name="Button" type="Label" parent="vbox"]
+layout_mode = 2
+text = "information about the level and what you're supposed 
+to do "
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq4i2amke32q5"]
+
+[ext_resource type="Script" path="res://failed_popup.gd" id="1_5ttmk"]
+[ext_resource type="FontFile" uid="uid://cc4fo28y42itf" path="res://upheavtt.ttf" id="2_d5cut"]
+
+[node name="Control" type="Window"]
+initial_position = 2
+size = Vector2i(424, 200)
+theme_override_colors/title_color = Color(0, 0.301961, 0, 1)
+theme_override_colors/title_outline_modulate = Color(0, 0.443137, 0, 1)
+script = ExtResource("1_5ttmk")
+
+[node name="vbox" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -48.0
+offset_right = 42.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d5cut")
+theme_override_font_sizes/font_size = 36
+text = "level failed
+"
+
+[node name="try_again" type="Button" parent="vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d5cut")
+text = "try again"
+
+[node name="level_select" type="Button" parent="vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d5cut")
+text = "Level Select"
+
+[node name="quit" type="Button" parent="vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d5cut")
+text = "quit"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="vbox/try_again" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="vbox/level_select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="vbox/quit" to="." method="_on_quit_pressed"]

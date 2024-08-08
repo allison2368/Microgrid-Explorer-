@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwbvswq202aif"]
+
+[ext_resource type="Script" path="res://main/Main.gd" id="1_d327l"]
+[ext_resource type="Texture2D" uid="uid://d08qhor186p7o" path="res://icon.svg" id="2_4wn58"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1axcy"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d327l")
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+offset_top = 136.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/bg = SubResource("StyleBoxTexture_1axcy")
+right_disconnects = true
+scroll_offset = Vector2(-45, -96)
+
+[node name="GraphNode" type="GraphNode" parent="GraphEdit"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 96.0
+offset_right = 81.0
+offset_bottom = 150.0
+mouse_filter = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="add_load" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Add Load"
+
+[node name="animate" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "animate"
+
+[node name="add_power" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_4wn58")
+
+[connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
+[connection signal="pressed" from="GridContainer/add_load" to="." method="_on_add_load_pressed"]
+[connection signal="pressed" from="GridContainer/animate" to="." method="_on_animate_pressed"]
+[connection signal="pressed" from="GridContainer/add_power" to="." method="_on_add_power_pressed"]

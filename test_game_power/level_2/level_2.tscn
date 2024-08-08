@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://cddd28kted2f7"]
+
+[ext_resource type="Script" path="res://level_2/level_2.gd" id="1_vvxiw"]
+[ext_resource type="Texture2D" uid="uid://cq3ui8mh30ll2" path="res://parts/grass (1).png" id="2_7urev"]
+[ext_resource type="FontFile" uid="uid://cc4fo28y42itf" path="res://upheavtt.ttf" id="3_fctje"]
+[ext_resource type="Script" path="res://main/Node2D.gd" id="4_tes4v"]
+[ext_resource type="PackedScene" uid="uid://bq4i2amke32q5" path="res://failed_popup.tscn" id="5_e0qpe"]
+[ext_resource type="PackedScene" uid="uid://dx8qvaeriqys" path="res://sines/sine.tscn" id="6_bjf4p"]
+
+[sub_resource type="Theme" id="Theme_h3e07"]
+
+[sub_resource type="Curve2D" id="Curve2D_bu3k7"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vvxiw")
+
+[node name="Grass(1)" type="TextureRect" parent="."]
+layout_mode = 1
+offset_top = 72.0
+offset_right = 1152.0
+offset_bottom = 729.0
+scale = Vector2(1, 0.882716)
+texture = ExtResource("2_7urev")
+expand_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 72.0
+color = Color(0.113725, 0.282353, 0.160784, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 7.0
+offset_right = 377.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("3_fctje")
+theme_override_font_sizes/font_size = 55
+text = "Level 2: connect the dots"
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+modulate = Color(1, 1, 1, 0.988235)
+clip_contents = false
+layout_mode = 2
+offset_top = 80.0
+offset_bottom = 80.0
+theme = SubResource("Theme_h3e07")
+theme_override_colors/grid_minor = Color(0, 0, 0, 0)
+theme_override_colors/grid_major = Color(0, 0, 0, 0)
+theme_override_colors/selection_fill = Color(0, 0, 0, 0.309804)
+theme_override_colors/selection_stroke = Color(0, 0, 0, 0)
+theme_override_colors/activity = Color(0, 0, 0, 0)
+right_disconnects = true
+snap_distance = 50
+panning_scheme = 1
+zoom_min = 1.0
+zoom_max = 1.0
+minimap_enabled = false
+arrange_nodes_button_hidden = true
+
+[node name="Node2D" type="Path2D" parent="GraphEdit"]
+curve = SubResource("Curve2D_bu3k7")
+script = ExtResource("4_tes4v")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 361.0
+offset_bottom = 181.0
+columns = 4
+
+[node name="add_solar" type="Button" parent="GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fctje")
+theme_override_font_sizes/font_size = 25
+text = "Add Solar +"
+
+[node name="add_load" type="Button" parent="GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fctje")
+theme_override_font_sizes/font_size = 25
+text = "Add Load +"
+
+[node name="animate" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fctje")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "play!"
+
+[node name="Control" parent="." instance=ExtResource("5_e0qpe")]
+visible = false
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 448.0
+offset_right = 288.0
+offset_bottom = 624.0
+
+[node name="ColorRect" type="ColorRect" parent="Control2"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 8.0
+offset_right = 248.0
+offset_bottom = 176.0
+color = Color(0.113725, 0.282353, 0.160784, 0.662745)
+
+[node name="ColorRect" type="ColorRect" parent="Control2/ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 248.0
+offset_bottom = 160.0
+color = Color(0.584314, 0.87451, 0.411765, 0.580392)
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 10.0
+offset_right = 193.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("3_fctje")
+theme_override_font_sizes/font_size = 26
+text = "Frequency"
+
+[node name="freq" parent="Control2" instance=ExtResource("6_bjf4p")]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
+[connection signal="draw" from="GraphEdit/Node2D" to="." method="_on_node_2d_draw"]
+[connection signal="pressed" from="GridContainer/add_solar" to="." method="_on_add_solar_pressed"]
+[connection signal="pressed" from="GridContainer/add_load" to="." method="_on_add_load_pressed"]
+[connection signal="pressed" from="GridContainer/animate" to="." method="_on_animate_pressed"]
+[connection signal="try_again" from="Control" to="." method="_on_try_again"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

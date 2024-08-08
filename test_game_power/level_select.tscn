@@ -1,0 +1,147 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxsnqbjhthjyh"]
+
+[ext_resource type="Script" path="res://level_select.gd" id="1_kaiwi"]
+[ext_resource type="Texture2D" uid="uid://64jx5sylnmk6" path="res://origbig.png" id="1_l1djp"]
+[ext_resource type="FontFile" uid="uid://cc4fo28y42itf" path="res://upheavtt.ttf" id="2_jf4ol"]
+[ext_resource type="Texture2D" uid="uid://cii4vhlci0cm4" path="res://images/Untitled-2024-06-18-1608.png" id="7_n4r00"]
+[ext_resource type="Texture2D" uid="uid://ljej64cei71e" path="res://images/Untitled-2024-06-18-1608.svg" id="8_bnfgq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qab5g"]
+bg_color = Color(0.415686, 0.635294, 0.54902, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kaiwi")
+
+[node name="Origbig" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+scale = Vector2(2, 2.02469)
+texture = ExtResource("1_l1djp")
+
+[node name="ColorRect" type="ColorRect" parent="Origbig"]
+offset_left = -268.0
+offset_top = -94.8293
+offset_right = 268.0
+offset_bottom = 142.171
+color = Color(0.582031, 0.792969, 0.636719, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Origbig/ColorRect"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 19.7561
+offset_right = 72.0
+offset_bottom = 55.7561
+color = Color(0.521141, 0.521141, 0.521141, 1)
+
+[node name="lvl1" type="Button" parent="Origbig/ColorRect/ColorRect"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.95121
+offset_right = 44.0
+offset_bottom = 32.0488
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_qab5g")
+text = "1"
+
+[node name="ColorRect2" type="ColorRect" parent="Origbig/ColorRect"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 19.7561
+offset_right = 148.0
+offset_bottom = 55.7561
+color = Color(0.521141, 0.521141, 0.521141, 1)
+
+[node name="lvl2" type="Button" parent="Origbig/ColorRect/ColorRect2"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.95121
+offset_right = 44.0
+offset_bottom = 32.0488
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_qab5g")
+text = "2
+"
+
+[node name="ColorRect3" type="ColorRect" parent="Origbig/ColorRect"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 19.7561
+offset_right = 224.0
+offset_bottom = 55.7561
+color = Color(0.521141, 0.521141, 0.521141, 1)
+
+[node name="lvl3" type="Button" parent="Origbig/ColorRect/ColorRect3"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.95121
+offset_right = 44.0
+offset_bottom = 32.0488
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_qab5g")
+text = "3"
+
+[node name="ColorRect4" type="ColorRect" parent="Origbig/ColorRect"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 19.7561
+offset_right = 300.0
+offset_bottom = 55.7561
+color = Color(0.521141, 0.521141, 0.521141, 1)
+
+[node name="lvl4" type="Button" parent="Origbig/ColorRect/ColorRect4"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.95121
+offset_right = 44.0
+offset_bottom = 32.0488
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_qab5g")
+text = "4"
+
+[node name="Label" type="Label" parent="Origbig"]
+offset_left = -196.0
+offset_top = -150.0
+offset_right = 206.0
+offset_bottom = -82.0
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 46
+text = "Level Selection"
+
+[node name="Label2" type="Label" parent="Origbig"]
+offset_left = -192.0
+offset_top = -150.146
+offset_right = 210.0
+offset_bottom = -82.1463
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jf4ol")
+theme_override_font_sizes/font_size = 46
+text = "Level Selection"
+
+[node name="Untitled-2024-06-18-1608" type="Sprite2D" parent="."]
+position = Vector2(104, 104)
+scale = Vector2(0.254319, 0.234219)
+texture = ExtResource("7_n4r00")
+
+[node name="Untitled-2024-06-18-1609" type="Sprite2D" parent="."]
+position = Vector2(968, 585)
+scale = Vector2(0.455556, 0.356502)
+texture = ExtResource("8_bnfgq")
+
+[connection signal="pressed" from="Origbig/ColorRect/ColorRect/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="Origbig/ColorRect/ColorRect/lvl1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Origbig/ColorRect/ColorRect2/lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="Origbig/ColorRect/ColorRect3/lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="Origbig/ColorRect/ColorRect4/lvl4" to="." method="_on_lvl_4_pressed"]

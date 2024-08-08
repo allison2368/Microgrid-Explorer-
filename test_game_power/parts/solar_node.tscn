@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://h11a1kn33lk1"]
+
+[ext_resource type="Script" path="res://parts/solar_node.gd" id="1_d6tek"]
+[ext_resource type="FontFile" uid="uid://cc4fo28y42itf" path="res://upheavtt.ttf" id="1_hqmse"]
+[ext_resource type="Texture2D" uid="uid://bk3tf87lq6ug1" path="res://images/vecteezy_element-shape-icon_9266442 (1).png" id="2_7o8mc"]
+[ext_resource type="Texture2D" uid="uid://c431bgc6lw7fb" path="res://images/solar_panel-removebg-preview (1).png" id="4_w8rjb"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7dhhc"]
+
+[node name="Control" type="GraphNode"]
+offset_left = 88.0
+offset_top = 40.0
+offset_right = 249.0
+offset_bottom = 202.0
+theme_override_colors/title_color = Color(0.979836, 0.980512, 0.324194, 1)
+theme_override_fonts/title_font = ExtResource("1_hqmse")
+theme_override_icons/port = ExtResource("2_7o8mc")
+theme_override_icons/resizer = SubResource("ViewportTexture_7dhhc")
+title = "Solar: 30 kwh"
+show_close = true
+resizable = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(0.980392, 0.980392, 0.32549, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.979836, 0.980512, 0.324194, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("1_d6tek")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("4_w8rjb")
+
+[node name="SpinBox" type="SpinBox" parent="."]
+visible = false
+layout_mode = 2
+value = 30.0
+allow_greater = true
+allow_lesser = true
+
+[connection signal="close_request" from="." to="." method="_on_close_request"]
+[connection signal="resize_request" from="." to="." method="_on_resize_request"]

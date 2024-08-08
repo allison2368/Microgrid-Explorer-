@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx8qvaeriqys"]
+
+[ext_resource type="Script" path="res://sines/sine.gd" id="1_nrrbn"]
+[ext_resource type="Shader" path="res://new_shader.gdshader" id="2_l1rl0"]
+[ext_resource type="Texture2D" uid="uid://d08qhor186p7o" path="res://icon.svg" id="3_ekjlq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tx5jj"]
+shader = ExtResource("2_l1rl0")
+shader_parameter/scrolling_speed = 5.0
+
+[sub_resource type="Animation" id="Animation_a3goe"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfs5b"]
+_data = {
+"new_animation": SubResource("Animation_a3goe")
+}
+
+[node name="Node2D" type="Node2D"]
+top_level = true
+script = ExtResource("1_nrrbn")
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_tx5jj")
+texture = ExtResource("3_ekjlq")
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+libraries = {
+"": SubResource("AnimationLibrary_gfs5b")
+}

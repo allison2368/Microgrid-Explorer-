@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://jplww75laytu"]
+
+[ext_resource type="Script" path="res://new_dialog.gd" id="1_17xwh"]
+
+[node name="new_dlalog" type="Node2D"]
+script = ExtResource("1_17xwh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1128.0
+offset_bottom = 224.0
+color = Color(0.113725, 0.282353, 0.160784, 1)
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 1104.0
+offset_bottom = 168.0
+bbcode_enabled = true
