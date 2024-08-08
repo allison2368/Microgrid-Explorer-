@@ -1,8 +1,10 @@
 # Microgrid-Explorer
 
+## Link to Demo Version: https://apeng10.itch.io/microgrid-explorer
+
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/b2a05a70-1726-41f4-b43e-44feeecbdbeb">
 
-https://apeng10.itch.io/microgrid-explorer
+
 
 ![Screenshot 2024-07-18 135103](https://github.com/user-attachments/assets/96a2dd69-a83b-4888-a1b3-b3d00b4b6ac8)
 
