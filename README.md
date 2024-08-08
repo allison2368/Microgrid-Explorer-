@@ -2,6 +2,8 @@
 
 ## Link to Demo Version: https://apeng10.itch.io/microgrid-explorer
 
+### Godot based energy education game aimed to teach users about the microgrid system. Currently in development but demo version is available via itch.io. Using Godot version 4.1.1
+
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/b2a05a70-1726-41f4-b43e-44feeecbdbeb">
 
 
