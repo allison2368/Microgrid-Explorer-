@@ -14,20 +14,21 @@
 #### Microgrid Explorer is a Godot based energy education game aimed to teach users about the microgrid system. Currently in development but demo version is available via itch.io. To run from Godot, download Godot version 4.1.1 and load in file ''
 
 #### Download Godot 4.1.1 for Windows:
-'''
+
+```
 # Download Godot
 Invoke-WebRequest -Uri "https://downloads.tuxfamily.org/godotengine/4.1.1/Godot_v4.1.1-stable_win64.exe.zip" -OutFile "godot_4.1.1.zip"
 
 # Extract the zip file
 Expand-Archive -Path "godot_4.1.1.zip" -DestinationPath "godot_4.1.1"
-'''
+```
 
 #### Download Godot 4.1.1 for MacOS:
-'''
+```
 curl -L https://downloads.tuxfamily.org/godotengine/4.1.1/Godot_v4.1.1-stable_macos.universal.zip -o godot_4.1.1.zip
 unzip godot_4.1.1.zip -d godot_4.1.1
 
-'''
+```
 
 
 ### Microgrid Explorer Interface and Underlying Game Structure using GraphNode
