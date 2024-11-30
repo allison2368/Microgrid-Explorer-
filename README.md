@@ -33,17 +33,19 @@ unzip godot_4.1.1.zip -d godot_4.1.1
 ## Key Features 
 
 ### Microgrid Explorer Interface and Underlying Game Structure using GraphNode
+#### Skeleton of the electric grid representation uses the GraphNode library in Godot. The nodes created from GraphNode are placed in GraphEdit, or the black grid background. Children of the GraphNode container are the input and output slots of each node. Further documentation can be found here: https://docs.godotengine.org/en/stable/classes/class_graphnode.html
 
 ![Screenshot 2024-07-18 135103](https://github.com/user-attachments/assets/96a2dd69-a83b-4888-a1b3-b3d00b4b6ac8)
 
 
-#### Interactive Dialogue System that Engages Audience
+### Interactive Dialogue System that Engages Audience
+#### Dialogue feature allows users to read material at their own pace. It provides information on the microgrids.
 
 ![ezgif-7-556a4b5c1b](https://github.com/user-attachments/assets/3345fbe0-0d9f-4e32-8c09-43b85e4bd727)
 
 
-#### Connect and Interact with Microgrid Elements 
-
+### Connect and Interact with Microgrid Elements 
+#### Users can freely move around elements and 
 ![ezgif-7-e37d238884](https://github.com/user-attachments/assets/019eb647-c99c-4569-8068-0644be2b59d7)
 
 
