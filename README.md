@@ -45,7 +45,7 @@ unzip godot_4.1.1.zip -d godot_4.1.1
 
 
 ### Connect and Interact with Microgrid Elements 
-#### Users can freely move around elements and 
+#### Users can connect microgrid elements and freely move around elements. The simulation allows users to understand the different elements of a microgrid.
 ![ezgif-7-e37d238884](https://github.com/user-attachments/assets/019eb647-c99c-4569-8068-0644be2b59d7)
 
 
