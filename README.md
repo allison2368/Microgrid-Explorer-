@@ -5,7 +5,7 @@
 ## Background
 #### Climate change is one of the most pressing challenges of our time, and requires innovative solutions that address the issue’s scientific, social and economic complexities. Among these solutions is the idea of climate resilience. Climate resilience is an essential community characteristic because it demonstrates their ability to recover and adapt after an extreme weather event. Thus, climate change education is a significant part of climate resilience as it teaches community members about the central issue and encourages them to incorporate solutions effective to their community’s needs. Microgrid Explorer is an initiative that provides a creative solution to energy education. It was built by Allison Peng in support of NSF-funded Project STORM - Data-Driven Approaches for Secure Electric Grids in Communities Disproportionately Impacted by Climate Change - at the Alaska Center for Energy and Power.
 
-### Links for demo version and presentation
+## Links for demo version and presentation
 #### Demo Version: https://apeng10.itch.io/microgrid-explorer
 #### YouTube Video ACEP Symposium and Live Demo: https://www.youtube.com/watch?v=MZ6F43FyB5M 
 
@@ -39,7 +39,7 @@ unzip godot_4.1.1.zip -d godot_4.1.1
 
 
 ### Interactive Dialogue System that Engages Audience
-#### Dialogue feature allows users to read material at their own pace. It provides information on the microgrids.
+#### Dialogue feature allows users to read material at their own pace. It provides information on levels and microgrids.
 
 ![ezgif-7-556a4b5c1b](https://github.com/user-attachments/assets/3345fbe0-0d9f-4e32-8c09-43b85e4bd727)
 
@@ -49,6 +49,6 @@ unzip godot_4.1.1.zip -d godot_4.1.1
 ![ezgif-7-e37d238884](https://github.com/user-attachments/assets/019eb647-c99c-4569-8068-0644be2b59d7)
 
 
-#### Add Microgrid Elements and Simulate Microgrid Behavior
-
+### Add Microgrid Elements and Simulate Microgrid Behavior
+#### When running levels, the bottom left graph indicates if the grid is 'balanced.' If the frequency is too high or low, the grid is imbalanced and there needs to be an appropriate amount of loads. 
 ![ezgif-7-da20621665](https://github.com/user-attachments/assets/19d8bc9e-85aa-4340-b135-ef551fd73e6d)
